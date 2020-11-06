@@ -10,7 +10,17 @@ import { EditPageComponent } from './edit-page/edit-page.component';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild([])
+    RouterModule.forChild([
+      {
+        path: '', component: AdminLayoutComponent, children: [
+          {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
+          {path: 'login', component: LoginPageComponent},
+          {path: 'dashboard', component: DashboardPageComponent},
+          {path: 'create', component: CreatePageComponent},
+          {path: 'post/:id/edit', component: EditPageComponent}
+        ]
+      }
+    ])
   ],
   exports: [
     RouterModule
