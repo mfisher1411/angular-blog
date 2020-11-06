@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-blog-ay"
+    }
+  },
+  "defaultProject": "angular-blog-ay",
+  "cli": {
+    "analytics": "40179783-2e31-4ee1-9499-8bfd4d2b9a59"
+  }
 }
