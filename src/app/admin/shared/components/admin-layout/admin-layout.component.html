@@ -3,7 +3,9 @@
     <h1>Angular Blog</h1>
   </a>
 
-  <ul>
+
+
+  <ul *ngIf="auth.isAuthenticated()">
     <li routerLinkActive="active">
       <a [routerLink]="['/admin', 'dashboard']">Main</a>
     </li>
