@@ -7,7 +7,7 @@ export interface FbAuthResponse {
   idToken: string;
   expiresIn: string;
 }
-export class Post {
+export interface Post {
   id?: string;
   title: string;
   text: string;
