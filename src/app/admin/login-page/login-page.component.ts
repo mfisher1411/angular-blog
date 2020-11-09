@@ -14,7 +14,7 @@ export class LoginPageComponent implements OnInit {
   submitted = false;
   constructor(
     public auth: AuthService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
