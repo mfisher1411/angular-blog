@@ -1,2 +1,30 @@
-<p>dashboard-page works!</p>
-<button (click)="test()">Test token</button>
+<div *ngIf="posts.length; else loading">
+  <div class="form-control">
+    <input type="text" placeholder="Find this post...">
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>
+          <button
+            class="btn btn-link open"
+            [routerLink]="['/admin', 'post', post.id, 'edit']"
+          >Open</button>
+          <a (click)="remove(post.id)">Remove</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #loading>
+  <p class="text-center">Loading...</p>
+</ng-template>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from '../shared/services/auth.service';
+import {Post} from '../../shared/interfaces';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -7,7 +8,7 @@ import {AuthService} from '../shared/services/auth.service';
   styleUrls: ['./dashboard-page.component.scss']
 })
 export class DashboardPageComponent implements OnInit {
-
+  posts: Post[] = [];
   constructor(
     private auth: AuthService
   ) { }
