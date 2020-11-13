@@ -8,7 +8,7 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./alert.component.scss']
 })
 export class AlertComponent implements OnInit, OnDestroy {
-  @Input() delay: 5000;
+  @Input() delay = 5000;
   public text: string;
   public type = 'success';
   aSub: Subscription;
